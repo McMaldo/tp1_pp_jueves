@@ -69,6 +69,8 @@ body{
             & span{
                 font-family: Impact;
                 font-size: 24px;
+                text-wrap: balance;
+                text-align: center;
             }
             & ul.sel_color{
                 display: flex;

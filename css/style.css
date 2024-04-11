@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    transition: all 0.5s ease-in-out;
+    font-family: sans-serif;
 }
 body{
     height: 100vh;
@@ -23,34 +25,47 @@ body{
 .container{
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg,#1f1f1f ,#115372 15%,#03a1b6,#1f1f1f);
+    background: linear-gradient(180deg,#1f1f1f ,#008b3a 15%,#008026,#1f1f1f);
     display: grid;
     place-items: center;
     & .tarjeta{
-        height: 600px;
+        height: 600px auto;
         width: 50%;
         max-width: 350px;
+        min-width: 340px;
         background-color: #f1f1f1;
         border-radius: 20px;
         padding: 10px;
         box-shadow: 10px 10px 10px -5px black;
         & .header{
-            height: 100px;
+            height: 150px;
             width: 100%;
             background-color: #1f1f1f;
             color: #f1f1f1;
             border-radius: 10px 10px 0 0;
-            padding: 10px;
+            position: relative;
+            overflow: hidden;
             /* display: flex;
             align-items: center;
             justify-content: center; */
             & .img{
-                height: 130%;
+                width: 100%;
+                position: absolute;
                 object-fit: cover;
+                left:0;
+                top:0;
+                z-index:0;
             }
-            & .right{
-                right: 0;
+            & .icons{
+                position: absolute;
+                width: 100%;
+                background-color: #1f1f1f;
+                z-index: 1;
+                padding: 10px;
             }
+        }
+        & .header:hover{
+            height: 230px;
         }
         & .producto{
             height: 200px;
@@ -62,13 +77,12 @@ body{
             align-items: center;
             flex-direction: column;
             gap: 5px;
-            font-family: sans-serif;
             & .precio{
-                font-size: 30px;
+                font-size: 34px;
+                font-family: Impact;
             }
             & span{
-                font-family: Impact;
-                font-size: 24px;
+                font-size: 22px;
                 text-wrap: balance;
                 text-align: center;
             }
@@ -96,12 +110,11 @@ body{
                     place-items: center;
                 }
                 & li:hover{
-                    transition: 0.4s;
                     background-color: #1f1f1f;
                     color: #f1f1f1;
                     font-weight: bolder;
                     cursor: pointer;
-                    transform: scale(1.2);
+                    transform: scale(1.52);
                 }
             }
         }
@@ -130,7 +143,6 @@ body{
                 border-radius: 20px;
                 background-color: #03a1b6;
                 font-size: 125%;
-                transition: all 0.5s ease-in-out;
             }
             & button:hover{
                 transform: scale(1.05);
@@ -146,7 +158,7 @@ body{
     justify-content: space-between;
 }
 @media screen and (orientation=portrait){
-    .container{
+    /*.container{
         background:linear-gradient(180deg,#1f1f1f ,#03a1b6);
-    }
+    }*/
 }

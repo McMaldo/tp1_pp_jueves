@@ -49,17 +49,17 @@ body{
             align-items: center;
             justify-content: center; */
             & .img{
+                top:40px;
+                opacity: 1;
+                z-index: 10;
                 width: 100%;
-                position: absolute;
-                object-fit: cover;
-                left:0;
-                top:0;
-                z-index:0;
+                /*position: absolute;*/
+                box-shadow: 0 0 50px 4000px rgba(0,0,0,0.9);
+
             }
             & .icons{
                 position: absolute;
                 width: 100%;
-                background-color: #1f1f1f;
                 z-index: 1;
                 padding: 10px;
             }
@@ -95,6 +95,11 @@ body{
                     width: 20px;
                     border-radius: 50%;
                     list-style: none;
+                }
+                & li:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    border: solid 1px #1f1f1f;
                 }
             }
             & ul.talles{
